@@ -1,21 +1,7 @@
 import React from "react";
 import './StudentItem.css';
-function StudentItem(){//ฟังก์ชันแบบปกติ
-// const StudentItem = () =>{ //ฟังก์ชันแบบแอโรฟังก์ชัน
-    // const resulte = false;
-    // const message1 = "Hi Apichat"
-    // const message2 = "Bye Wongtala"
-
-    // const arr1 = [1, 2, 3]
-
-    // let isShow = true;
-    // let hiMessage = "Hi Apichat"
-
-    // let arr2 = ["Hello", "World"]
-    // let arr3 = [""]
-
-    // let title = "ApiCHAt"
-
+class StudentItem extends React.Component{//ฟังก์ชันแบบคลาส
+    render(){
         let name = "Apichat";
         let surname = "Wongtala";
         let age = "27";
@@ -31,10 +17,9 @@ function StudentItem(){//ฟังก์ชันแบบปกติ
                 <div>{name}</div>
                 <div>{surname}</div>
                 <div>{age}</div>
-                <div>function components{
-                    
-                }</div>
+                <div>class components</div>
             </div>
         );
     }
+}
 export default StudentItem;
