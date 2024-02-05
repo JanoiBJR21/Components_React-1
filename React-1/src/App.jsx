@@ -16,7 +16,7 @@ const studentList = [
   {name: "Jar", surname: "nofy", age: 27}, //studentList[0]
   {name: "dar", surname: "goty", age: 30}, //studentList[1]
   {name: "mor", surname: "city", age: 45}, //studentList[2]
-  {name: "fer", surname: "nika", age: 30}  //studentList[3]
+  {name: "fer", surname: "nika", age: 35}  //studentList[3]
 ]
 
   return (

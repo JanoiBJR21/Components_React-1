@@ -20,6 +20,13 @@ function StudentItem(props){
         const name = props.name;
         const surname = props.surname;
         const age = props.age;
+
+        let retired;
+        if (age > 30) {
+            retired = "อายุเกิน ";
+        }else{
+            retired = "อายุไม่ถึง";
+        }
         return (
             <div className="StudentItem">
                 {/* <div>{resulte ? message1 : message2}</div> */}
@@ -32,6 +39,7 @@ function StudentItem(props){
                 <div>{name}</div>
                 <div>{surname}</div>
                 <div>{age}</div>
+                <div>{retired}</div>
             </div>
         );
     }
