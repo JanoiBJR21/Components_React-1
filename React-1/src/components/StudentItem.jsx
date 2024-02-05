@@ -24,8 +24,14 @@ function StudentItem(props){
         let retired;
         if (age > 30) {
             retired = "อายุเกิน ";
-        }else{
-            retired = "อายุไม่ถึง";
+        }
+        else{
+            if (age == 30) {
+                retired = "อายุพอดี ";
+            }
+            else{
+                retired = "อายุไม่ถึง";
+            }
         }
         return (
             <div className="StudentItem">
