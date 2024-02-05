@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import StudentItem from './components/StudentItem'
 import StudentItem2 from './components/StudentItem2'
+import StudentExsample from './components/StudentExsample'
 
 function App() {
 // const student1 = {name: "Jar", surname: "nofy", age: 27};
@@ -20,7 +21,7 @@ const studentList = [
 
   return (
       <div className="App">
-        <h1>Vite + React</h1>
+        <h1>StudentItem</h1>
         {/* <StudentItem name={student1.name} surname={student1.surname} age={student1.age}/>
         <StudentItem name={student2.name} surname={student2.surname} age={student2.age}/>
         <StudentItem name={student3.name} surname={student3.surname} age={student3.age}/>
@@ -30,6 +31,11 @@ const studentList = [
         <StudentItem name={studentList[1].name} surname={studentList[1].surname} age={studentList[1].age}/>
         <StudentItem name={studentList[2].name} surname={studentList[2].surname} age={studentList[2].age}/>
         <StudentItem name={studentList[3].name} surname={studentList[3].surname} age={studentList[3].age}/>
+        <h1>StudentExsample</h1>
+        <StudentExsample>
+          <div>test-1</div>
+          <div>test-2</div>
+        </StudentExsample>
       </div>
   );
 }
