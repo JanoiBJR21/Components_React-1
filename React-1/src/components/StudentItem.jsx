@@ -1,7 +1,8 @@
 import React from "react";
 import './StudentItem.css';
-function StudentItem(){//ฟังก์ชันแบบปกติ
+// function StudentItem(){//ฟังก์ชันแบบปกติ
 // const StudentItem = () =>{ //ฟังก์ชันแบบแอโรฟังก์ชัน
+function StudentItem(props){
     // const resulte = false;
     // const message1 = "Hi Apichat"
     // const message2 = "Bye Wongtala"
@@ -16,9 +17,9 @@ function StudentItem(){//ฟังก์ชันแบบปกติ
 
     // let title = "ApiCHAt"
 
-        let name = "Apichat";
-        let surname = "Wongtala";
-        let age = "27";
+        const name = props.name;
+        const surname = props.surname;
+        const age = props.age;
         return (
             <div className="StudentItem">
                 {/* <div>{resulte ? message1 : message2}</div> */}
@@ -31,9 +32,6 @@ function StudentItem(){//ฟังก์ชันแบบปกติ
                 <div>{name}</div>
                 <div>{surname}</div>
                 <div>{age}</div>
-                <div>function components{
-                    
-                }</div>
             </div>
         );
     }
