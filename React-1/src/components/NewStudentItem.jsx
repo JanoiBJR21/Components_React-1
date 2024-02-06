@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./NewStudentItem.css";
 
-const NewStudentItem = () => {
+const NewStudentItem = (props) => {
   const [curNam, setCurNam] = useState("");
   const [curSurname, setCurSurname] = useState("");
   const [curAge, setCurAge] = useState("");
@@ -24,7 +24,9 @@ const NewStudentItem = () => {
       // age: curAge, //ยังไม่แปลงเป็น number
       age: Number(curAge), //แปลงเป็น number
     };
-    console.log(newStudent);
+   
+    props.onAddStudent(newStudent)
+
     setCurNam("");
     setCurSurname("");
     setCurAge("");
@@ -40,21 +42,11 @@ const NewStudentItem = () => {
         <div className="StudentInput">
           <label>Surname</label>
           <input
-            value={curSurname}
-            onChange={surnameChangHandler}
-            type="text"
-          />
+            value={curSurname} onChange={surnameChangHandler}type="text" />
         </div>
         <div className="StudentInput">
           <label>Age</label>
-          <input
-            value={curAge}
-            onChange={ageChangHandler}
-            type="number"
-            min="0"
-            max="100"
-            step="1"
-          />
+          <input value={curAge} onChange={ageChangHandler}type="number" min="0" max="100" step="1" />
         </div>
       </div>
       <div className="SubmitButton">
