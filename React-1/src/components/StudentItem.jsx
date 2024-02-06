@@ -1,12 +1,16 @@
 import React from "react";
 import "./StudentItem.css";
 import StudentTag from "./StudentTag";
+import { useState } from "react";
 // function StudentItem(){//ฟังก์ชันแบบปกติ
 // const StudentItem = () =>{ //ฟังก์ชันแบบแอโรฟังก์ชัน
 function StudentItem(props) {
-  const name = props.name;
   const surname = props.surname;
   const age = props.age;
+  const [name, setName] = useState(props.name);
+  const nameHandler = () => {
+    setName("Chenged");
+  };
   // if (age > 30) {
   //     retired = "อายุเกิน ";
   // }
@@ -32,6 +36,7 @@ function StudentItem(props) {
       <div>{age}</div>
       {/* <div>{retired}</div> */}
       <StudentTag tagAge={age} />
+      <button onClick={nameHandler}>Cheng</button>
     </div>
   );
 }

@@ -5,6 +5,7 @@ import "./App.css";
 import StudentItem from "./components/StudentItem";
 import StudentItem2 from "./components/StudentItem2";
 import StudentExsample from "./components/StudentExsample";
+import NewStudentItem from "./components/NewStudentItem";
 
 function App() {
   // const student1 = {name: "Jar", surname: "nofy", age: 27};
@@ -19,6 +20,13 @@ function App() {
     { name: "fer", surname: "nika", age: 35 }, //studentList[3]
   ];
 
+  const [status, setStatus] = useState("Available");
+
+  const clickHandler = () => {
+    setStatus("Busy");
+    console.log("status", status);
+  };
+
   return (
     <div className="App">
       <h1>StudentItem</h1>
@@ -26,7 +34,7 @@ function App() {
         <StudentItem name={student2.name} surname={student2.surname} age={student2.age}/>
         <StudentItem name={student3.name} surname={student3.surname} age={student3.age}/>
         <StudentItem name={student4.name} surname={student4.surname} age={student4.age}/> */}
-
+      <NewStudentItem />
       <StudentItem
         name={studentList[0].name}
         surname={studentList[0].surname}
@@ -47,11 +55,13 @@ function App() {
         surname={studentList[3].surname}
         age={studentList[3].age}
       />
-      <h1>StudentExsample</h1>
+      <h3>Status: {status}</h3>
+      <button onClick={clickHandler}>Click me</button>
+      {/* <h1>StudentExsample</h1>
       <StudentExsample>
         <div>test-1</div>
         <div>test-2</div>
-      </StudentExsample>
+      </StudentExsample> */}
     </div>
   );
 }
